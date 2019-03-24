@@ -144,7 +144,7 @@ $(document).ready(function() {
     });
     $("#title-screen").css({
         "background-color": "black",
-        "background-image": "url('gym.jpg')",
+        "background-image": "url('../resources/gym.jpg')",
         "background-repeat": "no-repeat",
         "background-position": "center",
         "width": "100vw",
