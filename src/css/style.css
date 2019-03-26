@@ -1,1 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+.star-icon {
+    height: 22px;
+}
+.stars {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.textbox {
+    width : 100%;
+    height : auto;
+    font-family : "Roboto";
+}
+
+.text {
+    margin : 0;
+    padding : 0;
+    margin-bottom : 18px;
+    font-weight : 100;
+}
+
+.name {
+    width : 100%;
+    height : auto;
+}
+
+.profile-pic {
+    height : 42px;
+    width : 42px;
+    border-radius : 50%;
+    border : 2px solid #888888;
+    float : left;
+    margin-bottom : 8px;
+    background-color: #EEF2FF;
+}
+
+.actual-name {
+    line-height : 46px;
+    margin : 0;
+    padding : 0 0 8px 8px;
+    float : left;
+    font-family : "Roboto";
+    font-weight : bold;
+}
+
+.time {
+    line-height : 46px;
+    margin : 0;
+    padding : 0 0 8px 8px;
+    float : right;
+    font-family : "Roboto";
+    color : #888888;
+}
+.infoItems {
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #CCCCCC;
+    flex-shrink: 0;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+body {
+    width: 100vw;
+    margin: 0;
+}
+#wrapper {
+    width : 100%;
+    background-color: red;
+}
+
+#title-screen {
+    background-color : black;
+    background-image: url('../resources/gym.jpg');
+    background-repeat : no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 30vh;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#title {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald";
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: -1px -1px 20px #000, 1px -1px 20px #000, -1px 1px 20px #000, 1px 1px 20px #000;
+}
+#subtitle {
+    color: white;
+    text-transform: uppercase;
+    line-height: 0px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-family: "Oswald";
+    text-shadow: -1px -1px 20px #000, 1px -1px 20px #000, -1px 1px 20px #000, 1px 1px 20px #000;
+}
+#top-bar {
+    background-color: rgba(0,0,0,0.0);
+    width: 100%;
+    height: 37px;
+    position: absolute;
+    top: 0;
+    left: 100;
+}
+#info-screen {
+    background-color: rgba(0,0,0,1.0);
+    width: 100vw;
+    height: 70vh;
+}
+#info-wrapper {
+    background-color: rgb(253, 253, 253);
+    width: 100vw;
+    height: 100%;
+}
+#info-toggle {
+    background-color: rgb(253, 253, 253);
+    width: 100vw;
+    height: 75px;
+    padding-bottom: 25px;
+}
+#tab-wrapper {
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#reviews-tab {
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: center;
+    line-height: 75px;
+}
+#reviews {
+    margin: 0;
+    border-bottom: 2px solid red;
+}
+#facilities-tab {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 75px;
+    color: #888888;
+}
+#facilities {
+    margin: 0;
+}
+#info-items {
+    background-color: rgb(253, 253, 253);
+    width: 100vw;
+    height: calc(70vh - 100px);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+#menu-left {
+    height: 100%;
+    float: left;
+    filter: invert(100%);
+}
+#menu-right {
+    height: 100%;
+    float: right;
+    filter: invert(100%);
+    margin-right: 5px;
+}
+#page-name {
+    margin-top: 6px;
+    font-family: "Oswald";
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: -1px -1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000, 1px 1px 10px #000;
+}
+@media screen and (max-width: 701px){
+    #media-query1 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 702px) and (max-width: 1478px){
+    #media-query2 {
+        display: block;
+    }
+}
+@media screen and (min-width: 1479px) {
+    #media-query3 {
+        display: block;
+    }
+}
