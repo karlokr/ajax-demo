@@ -13,7 +13,7 @@ app.use('/js', express.static('js'));
 app.use('/resources', express.static('resources'));
 
 app.get('/', function (req, res) {
-    let doc = fs.readFileSync('html/index.html', "utf8");
+    let doc = fs.readFileSync('html/re-createdindex.html', "utf8");
     res.send(doc);
 })
 
