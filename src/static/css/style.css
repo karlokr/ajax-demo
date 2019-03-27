@@ -215,8 +215,21 @@ body {
     }
 
 }
-@media screen and (min-width: 1479px) {
+@media screen and (min-width: 1479px) and (max-width: 1850px){
+    #info-items {
+        max-width: 75vw;
+        margin: 0 auto;
+        height: calc(85vh - 100px);
+    }
+    #title-screen {
+        height: 22vh;
+    }
     #title {
         font-size: 4em;
+    }
+}
+@media screen and (min-width: 1851px) {
+    #title {
+        font-size: 5em;
     }
 }
