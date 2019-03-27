@@ -1,46 +1,23 @@
 // REQUIRES
-const lists = require('./core/data');
+const lists = require('./js/data');
 const express = require('express');
 const app = express();
 const fs = require("fs");
 const { JSDOM } = require('jsdom');
 const bodyParser = require('body-parser');
 
-app.use('/html', express.static('static/html'));
-app.use('/css', express.static('static/css'));
-app.use('/js', express.static('static/js'));
-app.use('/resources', express.static('static/resources'));
-app.use('/core/data.js', express.static('core/data.js'));
+app.use('/html', express.static('html'));
+app.use('/css', express.static('css'));
+app.use('/js', express.static('js'));
+app.use('/resources', express.static('resources'));
 
+//Loads page when launched.
 app.get('/', function (req, res) {
-    let doc = fs.readFileSync('./static/html/re-createdindex.html', "utf8");
-    console.log("called index");
+    let doc = fs.readFileSync('html/re-createdindex.html', "utf8");
     res.send(doc);
 })
 
-// create a callback that always gets called when any of the paths are referenced
-// ... useful for logging, etc.
-//var myLogger = function (req, res, next) {
-//  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-//  console.log('LOGGED', ip);
-//  next();
-//}
 
-//app.use(myLogger);
-
-
-
-
-app.get('/ajax-GET', function (req, res) {
-
-    // set the type of response:
-    res.setHeader('Content-Type', 'text/html');
-    let d = new Date();
-    console.log(d);
-
-    res.send({ msg: d });
-
-})
 app.get("/ajax-GET-list", function (req, res) {
 
 //    res.setHeader('Content-Type', 'application/json');
