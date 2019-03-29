@@ -5,11 +5,32 @@ const app = express();
 const fs = require("fs");
 const { JSDOM } = require('jsdom');
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 app.use('/html', express.static('html'));
 app.use('/css', express.static('css'));
 app.use('/js', express.static('js'));
 app.use('/resources', express.static('resources'));
+
+var db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "lab8"
+});
+
+db.connect(function(err){
+    if(err){
+        console.log(info()+ " " + err);
+    }
+    else {
+        console.log(info() + " connected...");
+    }
+});
+function info() {
+    now = new Date();
+    return now.getTime();
+};
 
 //Loads page when launched.
 app.get('/', function (req, res) {
@@ -34,13 +55,20 @@ app.get("/ajax-GET-list", function (req, res) {
     } else if(formatOfResponse == 'json-list') {
 
         res.setHeader('Content-Type', 'application/json');
-        dataList = lists.getJSON();
-        res.send(dataList);
+            console.log("reviews requested");
+        var sql = "SELECT * FROM review";
+        db.query(sql, function(err, result, fields) {
+        if(err) {
+            console.log(err);
+            res.send({msg: 'Wrong Format!, or DB error'});
+        }else {
+            console.log(result);
+            res.send(result);
+            console.log("Sent result");
+        }
+    });
 
-    } else {
-        res.send({msg: 'Wrong format!'});
-    }
-});
+}});
 
 // for page not found (i.e., 404)
 app.use(function (req, res, next) {

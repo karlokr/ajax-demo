@@ -51,15 +51,18 @@ $(document).ready(function() {
             data: { format: "json-list"},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
-                for(i = 1; i <= 10; i++) {
-                let htmldiv = $("#p"+i);
-                let htmlStr = "";
-                for(let i = 0; i < data.length; i++) {
-                    htmlStr += "<li>" + data[i] + "</li>";
+                
+                for(i = 0; i<data.length; i++) {
+                $("#p" + i+1).append('<p>' + data[i]['comment']+ '</p>');
+                    console.log(data[i]['comment']);
                 }
-                htmlStr += "</ul>";
-                    htmldiv.html(htmlStr);
-                }
+//                let htmlStr = "";
+//                for(let i = 0; i < data.length; i++) {
+//                    htmlStr += "<li>" + data[i] + "</li>";
+//                }
+//                htmlStr += "</ul>";
+//                    htmldiv.html(htmlStr);
+//                }
 
             },
             error: function(jqXHR, textStatus, errorThrown) {
