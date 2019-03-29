@@ -62,7 +62,6 @@ $(document).ready(function() {
         ajaxGetFacilities();
     });
     
-    // GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA
     $('#reviews').click(function(e) {
         $("#reviews").css({
             "border-bottom": "2px solid red",
