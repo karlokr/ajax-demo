@@ -7,9 +7,7 @@ $(document).ready(function() {
             data: {format: "html", tab: "facilities"},
             success: function(data) {
                 console.log("SUCCESS HTML:", data);
-                for(i = 1; i <= data.length; i++){
-                    $("#p" + i).html(data[i - 1]['comment']);
-                }
+                $("#info-items").html(data);
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 for(i = 1; i <= data.length + 1; i++){

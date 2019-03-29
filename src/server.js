@@ -50,11 +50,24 @@ app.get("/ajax-GET-tab-content", function (req, res) {
                 res.send({msg: 'Wrong Format!, or DB error'});
             } else {
                 console.log(result);
+                let html = "";
                 for (i = 0; i < result.length; i++){
-                    let html = '<p>' + result[i]['comment']+ '</p>'
-                    result[i]['comment'] = html;
+                    html += "<div class=\"infoItems\">";
+                    html += "<div class=\"stars\">";
+                    for (j = 0; j < 5; j++) {
+                        html += "<img class=\"star-icon\" src=\"../resources/star.png\">";
+                    }
+                    html += "</div>";
+                    html += "<div class=\"textbox\">"
+                    html += "<p class=\"text\" id=\"p" + (i + 1) + "\">" + result[i]['comment']+ "</p>";
+                    html += "</div>";
+                    html += "<div class=\"name\">";
+                    html += "<img class=\"profile-pic\" src=\"../resources/shrek.png\">";
+                    html += "<p class=\"actual-name\">Shrek</p>";
+                    html += "<p class=\"time\">Yesterday</p>";
+                    html += "</div></div>"
                 }
-                res.send(result);
+                res.send(html);
                 console.log("Sent result");
             }
         });
