@@ -68,4 +68,3 @@ INSERT INTO facilities (name, date_written, comment, number_of_stars) values
 INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
 ("bot 5", "Yesterday", "Great GYM! I really work out here !!!", 5);
 INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
-("bot 6", "Yesterday", "Great GYM! I really work out here !!!", 5);
