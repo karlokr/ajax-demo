@@ -1,0 +1,71 @@
+-- this is a one line comment
+
+--CREATE a TABLE
+CREATE TABLE workout (
+ID int NOT NULL AUTO_INCREMENT,
+workout_name VARCHAR(50),
+description VARCHAR(50),
+difficulty VARCHAR(10),
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE reviews (
+ID int NOT NULL AUTO_INCREMENT,
+name VARCHAR(50),
+date_written VARCHAR(20),
+comment VARCHAR(300),
+number_of_stars INT NOT NULL,
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE facilities (
+ID int NOT NULL AUTO_INCREMENT,
+name VARCHAR(50),
+date_written VARCHAR(20),
+comment VARCHAR(300),
+number_of_stars INT NOT NULL,
+PRIMARY KEY (ID)
+);
+
+INSERT INTO reviews (name, date_written, comment, number_of_stars) VALUES 
+('Jeff', 'Five days ago', 'This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each', 1);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+('Jerry', "A month ago", "This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract", 1);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+('Counter-Terrorist', "Yesterday", "Great gym for training your TACTICAL EXPLOSIVENESS!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("Phredryk", "2 days ago", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 1", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 2", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 3", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 4", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 5", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, comment, number_of_stars) values 
+("bot 6", "Yesterday", "Great GYM! I really work out here !!!", 5);
+
+
+INSERT INTO facilities (name, date_written, comment, number_of_stars) VALUES 
+('Jeff', 'Five days ago', 'This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each', 1);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+('Jerry', "A month ago", "This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract", 1);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+('Counter-Terrorist', "Yesterday", "Great gym for training your TACTICAL EXPLOSIVENESS!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("Phredryk", "2 days ago", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 1", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 2", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 3", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 4", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 5", "Yesterday", "Great GYM! I really work out here !!!", 5);
+INSERT INTO facilities (name, date_written, comment, number_of_stars) values 
+("bot 6", "Yesterday", "Great GYM! I really work out here !!!", 5);
