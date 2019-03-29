@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    
+$(document).ready(function() {    
     function ajaxGetFacilities() {
         $.ajax({
             url: "/ajax-get-tab-content",
@@ -50,7 +49,7 @@ $(document).ready(function() {
             }
         });
     }
-
+    
     $('#facilities').click(function(e) {
         $("#facilities").css({
             "border-bottom": "2px solid red",
