@@ -6,10 +6,9 @@ $(document).ready(function() {
             type: "GET",
             data: {format: "html", tab: "facilities"},
             success: function(data) {
-                for(i=1; i<=data.length; i++){
                 console.log("SUCCESS HTML:", data);
-                
-                $("#p" + i).html(data);
+                for(i = 1; i <= data.length; i++){
+                    $("#p" + i).html(data);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
@@ -27,9 +26,8 @@ $(document).ready(function() {
             data: {format: "json", tab: "reviews"},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
-                
-                for(i = 0; i<data.length; i++) {
-                    $("#p" + i + 1).append('<p>' + data[i]['comment']+ '</p>');
+                for(i = 1; i <= data.length; i++) {
+                    $("#p" + i).append('<p>' + data[i]['comment']+ '</p>');
                     console.log(data[i]['comment']);
                 }
 //                let htmlStr = "";
@@ -42,7 +40,7 @@ $(document).ready(function() {
 
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                for(i =1; i<=10; i++){
+                for(i = 1; i <= data.length + 1; i++){
                     $("#p" + i).text(jqXHR.jqXHR);
                     console.log("ERROR:", jqXHR, textStatus, errorThrown);
                 }
