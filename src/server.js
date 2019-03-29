@@ -50,8 +50,11 @@ app.get("/ajax-GET-tab-content", function (req, res) {
                 res.send({msg: 'Wrong Format!, or DB error'});
             }else {
                 console.log(result);
-                let html = '<p>' + result[0]['comment']+ '</p>'
-                res.send(html);
+                for (i = 0; i < result.length; i++){
+                    let html = '<p>' + result[i]['comment']+ '</p>'
+                    result[i]['comment'] = html;
+                }
+                res.send(result);
                 console.log("Sent result");
             }
         });

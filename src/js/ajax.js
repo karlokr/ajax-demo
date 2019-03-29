@@ -8,12 +8,14 @@ $(document).ready(function() {
             success: function(data) {
                 console.log("SUCCESS HTML:", data);
                 for(i = 1; i <= data.length; i++){
-                    $("#p" + i).html(data);
+                    $("#p" + i).html(data[i - 1]['comment']);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                $("#p1").text(jqXHR.statusText);
-                console.log("ERROR:", jqXHR, textStatus, errorThrown);
+                for(i = 1; i <= data.length + 1; i++){
+                    $("#p" + i).text(jqXHR.jqXHR);
+                    console.log("ERROR:", jqXHR, textStatus, errorThrown);
+                }
             }
         });
     }
@@ -27,7 +29,7 @@ $(document).ready(function() {
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
                 for(i = 1; i <= data.length; i++) {
-                    $("#p" + i).append('<p>' + data[i]['comment']+ '</p>');
+                    $("#p" + i).append('<p>' + data[i - 1]['comment']+ '</p>');
                     console.log(data[i]['comment']);
                 }
 
