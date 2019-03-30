@@ -12,16 +12,15 @@ app.use('/resources', express.static('resources'));
 
 var db = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "karlo",
+    password: "karlosqlpass1",
     database: "lab8"
 });
 
 db.connect(function(err){
     if (err){
         console.log(info() + " " + err);
-    }
-    else {
+    } else {
         console.log(info() + " connected...");
     }
 });
@@ -40,34 +39,23 @@ app.get("/ajax-GET-tab-content", function (req, res) {
     let format = req.query['format'];
     let tab = req.query['tab'];
     
+    function sqlTabContents() {
+        return "SELECT * FROM " + tab;
+    }
+    
     function getHTML() {
         res.setHeader('Content-Type', 'text/html');
-        console.log("html requested");
-        var sql = "SELECT * FROM " + tab;
-        db.query(sql, function(err, result, fields) {
+        db.query(sqlTabContents(), function(err, result, fields) {
             if (err) {
                 console.log(err);
                 res.send({msg: 'Wrong Format!, or DB error'});
             } else {
                 console.log(result);
-                let html = "";
-                for (i = 0; i < result.length; i++){
-                    html += "<div class=\"infoItems\">";
-                    html += "<div class=\"stars\">";
-                    for (j = 0; j < 5; j++) {
-                        html += "<img class=\"star-icon\" src=\"../resources/star.png\">";
-                    }
-                    html += "</div>";
-                    html += "<div class=\"textbox\">"
-                    html += "<p class=\"text\" id=\"p" + (i + 1) + "\">" + result[i]['comment']+ "</p>";
-                    html += "</div>";
-                    html += "<div class=\"name\">";
-                    html += "<img class=\"profile-pic\" src=\"../resources/shrek.png\">";
-                    html += "<p class=\"actual-name\">Shrek</p>";
-                    html += "<p class=\"time\">Yesterday</p>";
-                    html += "</div></div>"
+                if (tab == "reviews") {
+                    res.send(generateReviewsHTML(result));
+                } else if (tab == "facilities") {
+                    res.send(generateFacilitiesHTML(result));
                 }
-                res.send(html);
                 console.log("Sent result");
             }
         });
@@ -75,9 +63,7 @@ app.get("/ajax-GET-tab-content", function (req, res) {
 
     function getJSON() {
         res.setHeader('Content-Type', 'application/json');
-        console.log("json requested");
-        var sql = "SELECT * FROM " + tab;
-        db.query(sql, function(err, result, fields) {
+        db.query(sqlTabContents(), function(err, result, fields) {
             if (err) {
                 console.log(err);
                 res.send({msg: 'Wrong Format!, or DB error'});
@@ -87,6 +73,47 @@ app.get("/ajax-GET-tab-content", function (req, res) {
                 console.log("Sent result");
             }
         });
+    }
+    
+    function generateReviewsHTML(result) {
+        let html = "";
+        for (i = 0; i < result.length; i++){
+            html += "<div class=\"infoItems\">";
+            html += "<div class=\"stars\">";
+            for (j = 1; j <= 5; j++) {
+                if (j <= result[i]['number_of_stars']) {
+                    html += "<img class=\"star-icon\" src=\"../resources/star.png\">";
+                } else {
+                    html += "<img class=\"star-icon-grey\" src=\"../resources/star.png\">";
+                }
+            }
+            html += "<p class=\"location-name\">" + result[i]['location'] + "</p>";
+            html += "</div>";
+            html += "<div class=\"textbox\">"
+            html += "<p class=\"text\" id=\"p" + (i + 1) + "\">" + result[i]['comment']+ "</p>";
+            html += "</div>";
+            html += "<div class=\"name\">";
+            html += "<img class=\"profile-pic\" src=\"../resources/shrek.png\">";
+            html += "<p class=\"actual-name\">" + result[i]['name'] + "</p>";
+            html += "<p class=\"time\">" + result[i]['date_written'] + "</p>";
+            html += "</div></div>"
+        }
+        return html;
+    }
+
+    function generateFacilitiesHTML(result) {
+        let html = "";
+        for (i = 0; i < result.length; i++){
+            html += "<div class=\"infoItemsMaps\">";
+            html += "<div class=\"location\">";
+            html += "<p class=\"locationName\">" + result[i]['name'] + "</p>";
+            html += "<p class=\"address\">" + result[i]['address'] + ", " + result[i]['city'] + "</p>";
+            html += "</div>";
+            html += "<div class=\"mapbox\">"
+            html += result[i]['map'];
+            html += "</div></div>"
+        }
+        return html;
     }
 
     if (format == 'html') {

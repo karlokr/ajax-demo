@@ -1,0 +1,61 @@
+CREATE TABLE reviews (
+ID int NOT NULL AUTO_INCREMENT,
+name VARCHAR(50),
+date_written VARCHAR(20),
+location VARCHAR(30),
+comment VARCHAR(300),
+number_of_stars INT NOT NULL,
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE facilities (
+ID int NOT NULL AUTO_INCREMENT,
+name varchar(30),
+address VARCHAR(50),
+city VARCHAR(20),
+postal_code VARCHAR(6),
+map VARCHAR(500),
+PRIMARY KEY (ID)
+);
+
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("Jeff", "Five days ago", "Karlo's Gym", "This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each", 1);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("Jerry", "A month ago", "Universe Fitness", "This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract", 1);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("Counter-Terrorist", "Yesterday", "Asuka's Fitness World", "Great gym for training your TACTICAL EXPLOSIVENESS!", 4);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("Phredryk", "2 days ago",  "GioGio's Power Club", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best!", 2);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("bot 1", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("bot 2", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("bot 3", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("bot 4", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
+("bot 5", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES
+("bot 6", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Karlo's Gym", "Canada Way FS Beta Ave", "Burnaby, BC", "V5B5T4", '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2604.1851245772054!2d-122.9961414920876!3d49.25393696840232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf5eecc8095ea9142!2sCanada+Way+FS+Beta+Ave!5e0!3m2!1sen!2sca!4v1553958260124!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Universe Fitness", "SW 1", "Burnaby, BC", "V5B5T4", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.333946970695!2d-123.00481048395126!3d49.25111597932787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486771fd85111d9%3A0xffc609f9aa9cd97!2sSW+1%2C+Burnaby%2C+BC!5e0!3m2!1sen!2sca!4v1553958716810!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Lain's Gym", "4730-4734 Canada Way", "Burnaby, BC", "V5G1L2", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.3192232213!2d-122.99127428395124!3d49.2513950793278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486771bd4a65cff%3A0x3bf37a092047aace!2s4730-4734+Canada+Way%2C+Burnaby%2C+BC+V5G+1L2!5e0!3m2!1sen!2sca!4v1553958820344!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Asuka's Fitness World", "4863-4707 Brentlawn Dr", "Burnaby, BC", "V5C3V4", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.4269257185556!2d-122.99685008395092!3d49.268307079329915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486773747960d95%3A0xbf95bc421df26d5a!2s4863-4707+Brentlawn+Dr%2C+Burnaby%2C+BC+V5C+3V4!5e0!3m2!1sen!2sca!4v1553959297446!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("GioGio's Power Club", "4626-4684 Highlawn Dr", "Burnaby, BC", "V5C3S9", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.341525091184!2d-122.99978938395073!3d49.26992547933002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867736ceab9fbf%3A0x5eccff1d5f3a75e8!2s4626-4684+Highlawn+Dr%2C+Burnaby%2C+BC+V5C+3S9!5e0!3m2!1sen!2sca!4v1553959499109!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Satania's Gym", "4728 Northlawn Dr", "Burnaby, BC", "V5A4J9", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.193747126736!2d-122.99742248395074!3d49.272725879330196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867735d9122071%3A0xf4280736ef3db730!2s4728+Northlawn+Dr%2C+Burnaby%2C+BC+V5C+3S3!5e0!3m2!1sen!2sca!4v1553959630005!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Aqua's Pool & Gym", "1134-1078 Beta Ave", "Burnaby, BC", "V5CV3P", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0824187826393!2d-122.99975178395056!3d49.27483547933053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548677350bbc66a9%3A0x4faa529e6ec11a40!2s1134-1078+Beta+Ave%2C+Burnaby%2C+BC!5e0!3m2!1sen!2sca!4v1553959718336!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Joestar Training Facility", "4604-4700 Parker St", "Burnaby, BC", "V23DH4", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0441158657754!2d-123.00112938395065!3d49.27556127933066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548677353d8a3583%3A0x35a5090f23d2804!2s4604-4700+Parker+St%2C+Burnaby%2C+BC+V5C+3E2!5e0!3m2!1sen!2sca!4v1553959746866!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Gintoki's Dojo", "4301-4221 Albert St", "Burnaby, BC", "5S2DG4", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7071187437573!2d-123.01183448395047!3d49.281946679331156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548670c902272a7b%3A0x15e1aa7bfc1c9eca!2s4301-4221+Albert+St%2C+Burnaby%2C+BC+V5C+2E7!5e0!3m2!1sen!2sca!4v1553959796326!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');
+INSERT INTO facilities (name, address, city, postal_code, map) VALUES 
+("Kraken Training", "4199-4101 McGill St", "Burnaby, BC", "TF3F3D", '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.3717942113967!2d-123.01481968395035!3d49.28829977933191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548670c75fb509b9%3A0xbb4367c59dde353e!2s4199-4101+McGill+St%2C+Burnaby%2C+BC+V5C+1M7!5e0!3m2!1sen!2sca!4v1553959837596!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>');

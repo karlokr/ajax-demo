@@ -1,4 +1,20 @@
 $(document).ready(function() {    
+    function ajaxGetReviews() {
+        $.ajax({
+            url: "/ajax-GET-tab-content",
+            dataType: "html",
+            type: "GET",
+            data: {format: "html", tab: "reviews"},
+            success: function(data) {
+                console.log("SUCCESS HTML:", data);
+                $("#info-items").html(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log("ERROR:", jqXHR, textStatus, errorThrown);
+            }
+        });
+    }
+    
     function ajaxGetFacilities() {
         $.ajax({
             url: "/ajax-GET-tab-content",
@@ -6,37 +22,22 @@ $(document).ready(function() {
             type: "GET",
             data: {format: "html", tab: "facilities"},
             success: function(data) {
-                console.log("SUCCESS HTML:", data);
+                console.log("SUCCESS JSON:", data);
+                var html = "";
+                for (i = 0; i < data.length; i++){
+                    html += "<div class=\"infoItemsMaps\">";
+                    html += "<div class=\"location\">";
+                    html += "<p class=\"locationName\">" + data[i]['name'] + "</p>";
+                    html += "<p class=\"address\">" + data[i]['address'] + ", " + data[i]['city'] + "</p>";
+                    html += "</div>";
+                    html += "<div class=\"mapbox\">"
+                    html += data[i]['map'];
+                    html += "</div></div>"
+                }
                 $("#info-items").html(data);
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                for(i = 1; i <= data.length + 1; i++){
-                    $("#p" + i).text(jqXHR.jqXHR);
-                    console.log("ERROR:", jqXHR, textStatus, errorThrown);
-                }
-            }
-        });
-    }
-    
-    function ajaxGetReviews() {
-        $.ajax({
-            url: "/ajax-GET-tab-content",
-            dataType: "json",
-            type: "GET",
-            data: {format: "json", tab: "reviews"},
-            success: function(data) {
-                console.log("SUCCESS JSON:", data);
-                for(i = 1; i <= data.length; i++) {
-                    $("#p" + i).append('<p>' + data[i - 1]['comment']+ '</p>');
-                    console.log(data[i - 1]['comment']);
-                }
-
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                for(i = 1; i < data.length; i++){
-                    $("#p" + i).text(jqXHR.jqXHR);
-                    console.log("ERROR:", jqXHR, textStatus, errorThrown);
-                }
+                console.log("ERROR:", jqXHR, textStatus, errorThrown);
             }
         });
     }

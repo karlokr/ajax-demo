@@ -4,11 +4,22 @@
 .star-icon {
     height: 22px;
 }
+.star-icon-grey {
+    height: 22px;
+    filter: grayscale(100%);
+}
 .stars {
     width: 100%;
     height: auto;
     margin-top: 8px;
     margin-bottom: 4px;
+}
+.location-name {
+    margin: 0;
+    float: right;
+    font-size: 10pt;
+    color: gray;
+    line-height: 22px;
 }
 
 .textbox {
@@ -25,6 +36,11 @@
 }
 
 .name {
+    width : 100%;
+    height : auto;
+}
+
+.location {
     width : 100%;
     height : auto;
 }
@@ -48,10 +64,28 @@
     font-weight : bold;
 }
 
+.locationName {
+    line-height : 46px;
+    margin : 0;
+    padding : 0 0 0px 8px;
+    float : left;
+    font-family : "Roboto";
+    font-weight : bold;
+}
+
 .time {
     line-height : 46px;
     margin : 0;
     padding : 0 0 8px 8px;
+    float : right;
+    font-family : "Roboto";
+    color : #888888;
+}
+
+.address {
+    line-height : 46px;
+    margin : 0;
+    padding : 0 0 0px 8px;
     float : right;
     font-family : "Roboto";
     color : #888888;
@@ -66,6 +100,27 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.infoItemsMaps {
+    background-color: rgb(255, 255, 255);
+    width: 620px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #CCCCCC;
+    flex-shrink: 0;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.infoItemsMaps iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+.mapbox {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
 body::-webkit-scrollbar {
     width: 0 !important;
 }
