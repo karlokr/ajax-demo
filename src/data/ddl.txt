@@ -3,7 +3,7 @@ ID int NOT NULL AUTO_INCREMENT,
 name VARCHAR(50),
 date_written VARCHAR(20),
 location VARCHAR(30),
-comment VARCHAR(300),
+comment VARCHAR(1000),
 number_of_stars INT NOT NULL,
 PRIMARY KEY (ID)
 );
@@ -19,21 +19,21 @@ PRIMARY KEY (ID)
 );
 
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("Jeff", "Five days ago", "Karlo's Gym", "This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each", 1);
+("Jeff", "Five days ago", "Karlo's Gym", "This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each. This is a very dirty gym that is totally ignored by the owners. Do not waste your money on a membership. They charge different membership amounts for each. This gym is not military friendly and the Owner is not aware of something called customer service.", 1);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("Jerry", "A month ago", "Universe Fitness", "This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract", 1);
+("Jerry", "A month ago", "Universe Fitness", "This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract. This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract.This gym is not military friendly and the Owner is not aware of something called customer service. Was told even with orders they will not let anybody out of contract.", 1);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
 ("Counter-Terrorist", "Yesterday", "Asuka's Fitness World", "Great gym for training your TACTICAL EXPLOSIVENESS!", 4);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("Phredryk", "2 days ago",  "GioGio's Power Club", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best!", 2);
+("Phredryk", "2 days ago",  "GioGio's Power Club", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best!", 2);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("bot 1", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+("bot 1", "Yesterday", "Karlo's Gym", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best!", 5);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("bot 2", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+("bot 2", "Yesterday", "Karlo's Gym", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best!", 5);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("bot 3", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+("bot 3", "Yesterday", "Karlo's Gym", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best!!!!", 5);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
-("bot 4", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
+("bot 4", "Yesterday", "Karlo's Gym", "I think this is the best gym for locking down your ab exercises! the best! the best! the best! the best!the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best! the best!", 5);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES 
 ("bot 5", "Yesterday", "Karlo's Gym", "Great GYM! I really work out here !!!", 5);
 INSERT INTO reviews (name, date_written, location, comment, number_of_stars) VALUES

@@ -34,6 +34,7 @@
     padding : 0;
     margin-bottom : 18px;
     font-weight : 100;
+    font-family : "Roboto";
 }
 
 .name {
@@ -102,7 +103,7 @@
     padding-right: 15px;
 }
 
-.infoItemsMaps iframe {
+.infoItems iframe {
     margin: 0 auto;
     display: block;
 }
@@ -259,8 +260,15 @@ body {
     #info-items {
         height: calc(85vh - 100px);
     }
+    #menu-left {
+        margin-right: 0px;
+    }
+    #menu-right {
+        margin-right: 0px;
+    }
 
 }
+
 @media screen and (min-width: 1479px) and (max-width: 1850px){
     #info-items {
         max-width: 75vw;
@@ -273,9 +281,22 @@ body {
     #title {
         font-size: 4em;
     }
+    #menu-left {
+        margin-left: 200px;
+    }
+    #menu-right {
+        margin-right: 200px;
+    }
 }
+
 @media screen and (min-width: 1851px) {
     #title {
         font-size: 5em;
+    }
+    #menu-left {
+        margin-left: 200px;
+    }
+    #menu-right {
+        margin-right: 200px;
     }
 }

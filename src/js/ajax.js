@@ -42,7 +42,7 @@ $(document).ready(function() {
         });
     }
     
-    $('#facilities').click(function(e) {
+    function clickFacilities() {
         $("#facilities").css({
             "border-bottom": "2px solid red",
             "color": "black"
@@ -52,9 +52,9 @@ $(document).ready(function() {
             "color": "#888888"
         });
         ajaxGetFacilities();
-    });
+    }
     
-    $('#reviews').click(function(e) {
+    function clickReviews() {
         $("#reviews").css({
             "border-bottom": "2px solid red",
             "color": "black"
@@ -64,8 +64,16 @@ $(document).ready(function() {
             "color": "#888888"
         });
         ajaxGetReviews();
+    }
+    
+    $('#facilities').click(function(e) {
+        clickFacilities();
+    });
+    
+    $('#reviews').click(function(e) {
+        clickReviews();
     });
     
     // On start up
-    ajaxGetReviews();
+    clickFacilities();
 });
