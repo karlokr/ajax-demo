@@ -18,9 +18,9 @@ $(document).ready(function() {
     function ajaxGetFacilities() {
         $.ajax({
             url: "/ajax-GET-tab-content",
-            dataType: "html",
+            dataType: "json",
             type: "GET",
-            data: {format: "html", tab: "facilities"},
+            data: {format: "json", tab: "facilities"},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
                 var html = "";
@@ -33,8 +33,8 @@ $(document).ready(function() {
                     html += "<div class=\"mapbox\">"
                     html += data[i]['map'];
                     html += "</div></div>"
-                }
-                $("#info-items").html(data);
+                };
+                $("#info-items").html(html);
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log("ERROR:", jqXHR, textStatus, errorThrown);
