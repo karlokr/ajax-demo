@@ -104,10 +104,10 @@ app.get("/ajax-GET-tab-content", function (req, res) {
     function generateFacilitiesHTML(result) {
         let html = "";
         for (i = 0; i < result.length; i++){
-            html += "<div class=\"infoItemsMaps\">";
+            html += "<div class=\"infoItems\">";
             html += "<div class=\"location\">";
             html += "<p class=\"locationName\">" + result[i]['name'] + "</p>";
-            html += "<p class=\"address\">" + result[i]['address'] + ", " + result[i]['city'] + "</p>";
+            html += "<p class=\"address\">" + result[i]['city'] + "</p>";
             html += "</div>";
             html += "<div class=\"mapbox\">"
             html += result[i]['map'];

@@ -25,10 +25,10 @@ $(document).ready(function() {
                 console.log("SUCCESS JSON:", data);
                 var html = "";
                 for (i = 0; i < data.length; i++){
-                    html += "<div class=\"infoItemsMaps\">";
+                    html += "<div class=\"infoItems\">";
                     html += "<div class=\"location\">";
                     html += "<p class=\"locationName\">" + data[i]['name'] + "</p>";
-                    html += "<p class=\"address\">" + data[i]['address'] + ", " + data[i]['city'] + "</p>";
+                    html += "<p class=\"address\">" + data[i]['city'] + "</p>";
                     html += "</div>";
                     html += "<div class=\"mapbox\">"
                     html += data[i]['map'];
