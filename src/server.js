@@ -18,8 +18,8 @@ var db = mysql.createConnection({
 });
 
 db.connect(function(err){
-    if(err){
-        console.log(info()+ " " + err);
+    if (err){
+        console.log(info() + " " + err);
     }
     else {
         console.log(info() + " connected...");
@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
     res.send(doc);
 })
 
-app.get("/ajax-get-tab-content", function (req, res) {
+app.get("/ajax-GET-tab-content", function (req, res) {
     let format = req.query['format'];
     let tab = req.query['tab'];
     
@@ -45,12 +45,29 @@ app.get("/ajax-get-tab-content", function (req, res) {
         console.log("html requested");
         var sql = "SELECT * FROM " + tab;
         db.query(sql, function(err, result, fields) {
-            if(err) {
+            if (err) {
                 console.log(err);
                 res.send({msg: 'Wrong Format!, or DB error'});
-            }else {
+            } else {
                 console.log(result);
-                res.send(result);
+                let html = "";
+                for (i = 0; i < result.length; i++){
+                    html += "<div class=\"infoItems\">";
+                    html += "<div class=\"stars\">";
+                    for (j = 0; j < 5; j++) {
+                        html += "<img class=\"star-icon\" src=\"../resources/star.png\">";
+                    }
+                    html += "</div>";
+                    html += "<div class=\"textbox\">"
+                    html += "<p class=\"text\" id=\"p" + (i + 1) + "\">" + result[i]['comment']+ "</p>";
+                    html += "</div>";
+                    html += "<div class=\"name\">";
+                    html += "<img class=\"profile-pic\" src=\"../resources/shrek.png\">";
+                    html += "<p class=\"actual-name\">Shrek</p>";
+                    html += "<p class=\"time\">Yesterday</p>";
+                    html += "</div></div>"
+                }
+                res.send(html);
                 console.log("Sent result");
             }
         });
@@ -61,10 +78,10 @@ app.get("/ajax-get-tab-content", function (req, res) {
         console.log("json requested");
         var sql = "SELECT * FROM " + tab;
         db.query(sql, function(err, result, fields) {
-            if(err) {
+            if (err) {
                 console.log(err);
                 res.send({msg: 'Wrong Format!, or DB error'});
-            }else {
+            } else {
                 console.log(result);
                 res.send(result);
                 console.log("Sent result");
@@ -74,7 +91,7 @@ app.get("/ajax-get-tab-content", function (req, res) {
 
     if (format == 'html') {
         getHTML();
-    } else if(format == 'json') {
+    } else if (format == 'json') {
         getJSON();
     }
 });

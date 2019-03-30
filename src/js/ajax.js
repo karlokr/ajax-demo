@@ -1,48 +1,39 @@
 $(document).ready(function() {    
     function ajaxGetFacilities() {
         $.ajax({
-            url: "/ajax-get-tab-content",
+            url: "/ajax-GET-tab-content",
             dataType: "html",
             type: "GET",
             data: {format: "html", tab: "facilities"},
             success: function(data) {
-                for(i=1; i<=data.length; i++){
                 console.log("SUCCESS HTML:", data);
-                
-                $("#p" + i).html(data);
-                }
+                $("#info-items").html(data);
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                $("#p1").text(jqXHR.statusText);
-                console.log("ERROR:", jqXHR, textStatus, errorThrown);
+                for(i = 1; i <= data.length + 1; i++){
+                    $("#p" + i).text(jqXHR.jqXHR);
+                    console.log("ERROR:", jqXHR, textStatus, errorThrown);
+                }
             }
         });
     }
     
     function ajaxGetReviews() {
         $.ajax({
-            url: "/ajax-get-tab-content",
+            url: "/ajax-GET-tab-content",
             dataType: "json",
             type: "GET",
             data: {format: "json", tab: "reviews"},
             success: function(data) {
                 console.log("SUCCESS JSON:", data);
-                
-                for(i = 0; i<data.length; i++) {
-                    $("#p" + i + 1).append('<p>' + data[i]['comment']+ '</p>');
-                    console.log(data[i]['comment']);
+                for(i = 1; i <= data.length; i++) {
+                    $("#p" + i).append('<p>' + data[i - 1]['comment']+ '</p>');
+                    console.log(data[i - 1]['comment']);
                 }
-//                let htmlStr = "";
-//                for(let i = 0; i < data.length; i++) {
-//                    htmlStr += "<li>" + data[i] + "</li>";
-//                }
-//                htmlStr += "</ul>";
-//                    htmldiv.html(htmlStr);
-//                }
 
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                for(i =1; i<=10; i++){
+                for(i = 1; i < data.length; i++){
                     $("#p" + i).text(jqXHR.jqXHR);
                     console.log("ERROR:", jqXHR, textStatus, errorThrown);
                 }
@@ -62,7 +53,6 @@ $(document).ready(function() {
         ajaxGetFacilities();
     });
     
-    // GET A LIST OF 'THINGS' FROM THE SERVER AS JSON DATA
     $('#reviews').click(function(e) {
         $("#reviews").css({
             "border-bottom": "2px solid red",
