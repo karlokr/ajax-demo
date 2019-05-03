@@ -1,1 +1,1 @@
-# lab08
+# A demo of AJAX using an SQL database
