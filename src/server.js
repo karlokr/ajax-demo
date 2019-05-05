@@ -12,9 +12,9 @@ app.use('/resources', express.static('resources'));
 
 var db = mysql.createConnection({
     host: "localhost",
-    user: "karlo",
-    password: "karlosqlpass1",
-    database: "lab8"
+    user: "",
+    password: "",
+    database: ""
 });
 
 db.connect(function(err){
