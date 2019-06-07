@@ -4,94 +4,98 @@
 .star-icon {
     height: 22px;
 }
+
 .star-icon-grey {
     height: 22px;
     filter: grayscale(100%);
 }
+
 .stars {
     width: 100%;
     height: auto;
     margin-top: 8px;
     margin-bottom: 4px;
 }
+
 .location-name {
     margin: 0;
     float: right;
     font-size: 10pt;
     color: gray;
     line-height: 22px;
-    font-family : "Roboto";
+    font-family: "Roboto";
 }
 
 .textbox {
-    width : 100%;
-    height : auto;
-    font-family : "Roboto";
+    width: 100%;
+    height: auto;
+    font-family: "Roboto";
 }
 
 .text {
-    margin : 0;
-    padding : 0;
-    margin-bottom : 18px;
-    font-weight : 100;
-    font-family : "Roboto";
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px;
+    font-weight: 100;
+    font-family: "Roboto";
 }
 
 .name {
-    width : 100%;
-    height : auto;
+    width: 100%;
+    height: auto;
 }
 
 .location {
-    width : 100%;
-    height : auto;
+    width: 100%;
+    height: auto;
 }
 
 .profile-pic {
-    height : 42px;
-    width : 42px;
-    border-radius : 50%;
-    border : 2px solid #888888;
-    float : left;
-    margin-bottom : 8px;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #888888;
+    float: left;
+    margin-bottom: 8px;
     background-color: #EEF2FF;
 }
 
 .actual-name {
-    line-height : 46px;
-    margin : 0;
-    padding : 0 0 8px 8px;
-    float : left;
-    font-family : "Roboto";
-    font-weight : bold;
+    line-height: 46px;
+    margin: 0;
+    padding: 0 0 8px 8px;
+    float: left;
+    font-family: "Roboto";
+    font-weight: bold;
 }
 
 .locationName {
-    line-height : 46px;
-    margin : 0;
-    padding : 0 0 0px 8px;
-    float : left;
-    font-family : "Roboto";
-    font-weight : bold;
+    line-height: 46px;
+    margin: 0;
+    padding: 0 0 0px 8px;
+    float: left;
+    font-family: "Roboto";
+    font-weight: bold;
 }
 
 .time {
-    line-height : 46px;
-    margin : 0;
-    padding : 0 0 8px 8px;
-    float : right;
-    font-family : "Roboto";
-    color : #888888;
+    line-height: 46px;
+    margin: 0;
+    padding: 0 0 8px 8px;
+    float: right;
+    font-family: "Roboto";
+    color: #888888;
 }
 
 .address {
-    line-height : 46px;
-    margin : 0;
-    padding : 0 0 0px 8px;
-    float : right;
-    font-family : "Roboto";
-    color : #888888;
+    line-height: 46px;
+    margin: 0;
+    padding: 0 0 0px 8px;
+    float: right;
+    font-family: "Roboto";
+    color: #888888;
 }
+
 .infoItems {
     background-color: rgb(255, 255, 255);
     width: 330px;
@@ -116,19 +120,21 @@
 body::-webkit-scrollbar {
     width: 0 !important;
 }
+
 body {
     width: 100vw;
     margin: 0;
 }
+
 #wrapper {
-    width : 100%;
+    width: 100%;
     background-color: red;
 }
 
 #title-screen {
-    background-color : black;
+    background-color: black;
     background-image: url('../resources/gym.jpg');
-    background-repeat : no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
     width: 100vw;
     height: 30vh;
@@ -145,6 +151,7 @@ body {
     margin-bottom: 10px;
     text-shadow: -1px -1px 20px #000, 1px -1px 20px #000, -1px 1px 20px #000, 1px 1px 20px #000;
 }
+
 #subtitle {
     color: white;
     text-transform: uppercase;
@@ -154,30 +161,35 @@ body {
     font-family: "Oswald";
     text-shadow: -1px -1px 20px #000, 1px -1px 20px #000, -1px 1px 20px #000, 1px 1px 20px #000;
 }
+
 #top-bar {
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0, 0, 0, 0.0);
     width: 100%;
     height: 37px;
     position: absolute;
     top: 0;
     left: 100;
 }
+
 #info-screen {
-    background-color: rgba(0,0,0,1.0);
+    background-color: rgba(0, 0, 0, 1.0);
     width: 100vw;
     height: 70vh;
 }
+
 #info-wrapper {
     background-color: rgb(253, 253, 253);
     width: 100vw;
     height: 100%;
 }
+
 #info-toggle {
     background-color: rgb(253, 253, 253);
     width: 100vw;
     height: 75px;
     padding-bottom: 25px;
 }
+
 #tab-wrapper {
     width: 80%;
     height: 100%;
@@ -187,6 +199,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
 #reviews-tab {
     width: 50%;
     height: 100%;
@@ -194,10 +207,12 @@ body {
     text-align: center;
     line-height: 75px;
 }
+
 #reviews {
     margin: 0;
     border-bottom: 2px solid red;
 }
+
 #facilities-tab {
     width: 50%;
     height: 100%;
@@ -206,12 +221,15 @@ body {
     line-height: 75px;
     color: #888888;
 }
+
 #facilities {
     margin: 0;
 }
+
 #info-items::-webkit-scrollbar {
     width: 0 !important;
 }
+
 #info-items {
     background-color: rgb(253, 253, 253);
     width: 100vw;
@@ -222,17 +240,20 @@ body {
     justify-content: center;
     align-items: flex-start;
 }
+
 #menu-left {
     height: 100%;
     float: left;
     filter: invert(100%);
 }
+
 #menu-right {
     height: 100%;
     float: right;
     filter: invert(100%);
     margin-right: 5px;
 }
+
 #page-name {
     margin-top: 6px;
     font-family: "Oswald";
@@ -240,50 +261,60 @@ body {
     letter-spacing: 1px;
     text-shadow: -1px -1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000, 1px 1px 10px #000;
 }
-@media screen and (max-width: 701px){
+
+@media screen and (max-width: 701px) {
     #title-screen {
         height: 22vh;
     }
+
     #info-items {
         height: calc(85vh - 100px);
     }
-    
+
 }
 
-@media screen and (min-width: 702px) and (max-width: 1478px){
+@media screen and (min-width: 702px) and (max-width: 1478px) {
     #title {
         font-size: 3em;
     }
+
     #title-screen {
         height: 22vh;
     }
+
     #info-items {
         height: calc(85vh - 100px);
     }
+
     #menu-left {
         margin-right: 0px;
     }
+
     #menu-right {
         margin-right: 0px;
     }
 
 }
 
-@media screen and (min-width: 1479px) and (max-width: 1850px){
+@media screen and (min-width: 1479px) and (max-width: 1850px) {
     #info-items {
         max-width: 75vw;
         margin: 0 auto;
         height: calc(85vh - 100px);
     }
+
     #title-screen {
         height: 22vh;
     }
+
     #title {
         font-size: 4em;
     }
+
     #menu-left {
         margin-left: 200px;
     }
+
     #menu-right {
         margin-right: 200px;
     }
@@ -293,9 +324,11 @@ body {
     #title {
         font-size: 5em;
     }
+
     #menu-left {
         margin-left: 200px;
     }
+
     #menu-right {
         margin-right: 200px;
     }
